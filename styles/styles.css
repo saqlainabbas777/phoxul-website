@@ -125,3 +125,41 @@ a {
 li {
     list-style: none;
 }
+/*----------*----------*----------* Utility Classes */
+
+/*----------*----------* section padding */
+.section__padding {
+    padding: var(--padding-d-l-v) var(--padding-d-l-h);
+}
+
+/*----------*----------* section title */
+.section__title {
+    font-size: var(--font-size-d-lc);
+    font-weight: 900;
+}
+
+/*----------*----------* section title */
+.section__para {
+    font-size: var(--font-size-st-sc);
+    color: var(--color-quaternary);
+}
+
+/*----------*----------*----------* Overall Layout */
+.container {
+    display: grid;
+    grid-template-columns: [container-start] repeat(12, minmax(min-content, 12.5rem)) [container-end];
+    grid-template-rows: repeat(9, min-content);
+    justify-content: center;
+}
+
+.overall-layout {
+    grid-column: container-start / container-end;
+}
+
+/*----------*----------*----------* Header section */
+/*.header {*/
+/*    background-color: var(--color-secondary);*/
+/*    padding: var(--padding-d-m-v) var(--padding-d-l-h);*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
