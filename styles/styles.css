@@ -778,7 +778,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    background: linear-gradient(to bottom, var(--color-secondary), var(--color-secondary-m)), url("../images/footer-bg.jpg");
+    background: linear-gradient(to bottom, var(--color-secondary-m-2), var(--color-secondary-m-2)), url("../images/footer-bg.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -930,7 +930,7 @@ img {
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
     /*----------*----------*----------* section padding */
     .section__padding {
         padding: var(--padding-d-l-v) var(--padding-d-mc-h);
@@ -1039,7 +1039,6 @@ img {
     }
 
     /*----------*----------*----------*  section title */
-
     .section__title {
         font-size: var(--font-size-st-mc);
     }
@@ -1062,7 +1061,7 @@ img {
     }
 
     .news__article--content__title,
-    .news__article--content__link{
+    .news__article--content__link {
         color: var(--color-primary);
     }
 
@@ -1086,5 +1085,59 @@ img {
 
     .contact__testimonial--info__name {
         color: var(--color-primary);
+    }
+
+    /*----------*----------*----------* footer section */
+    .footer__newsletter {
+        flex-wrap: wrap;
+        gap: 2rem 0;
+    }
+
+    .footer__newsletter--content,
+    .footer__newsletter--form {
+        flex-basis: auto;
+    }
+
+    .footer__newsletter--form input {
+        padding: var(--padding-st-s-v) var(--padding-st-s-h);
+        font-size: var(--font-size-st-s);
+    }
+
+    .footer__author {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer__author--info,
+    .footer__author--quick-links {
+        border: none;
+    }
+
+    .footer__author--info,
+    .footer__author--quick-links,
+    .footer__author--contact {
+        flex-basis: auto;
+    }
+
+    .footer__copy-rights {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section__padding {
+        padding: var(--padding-st-l-v) var(--padding-st-s-h);
+    }
+
+    /*----------*----------*----------* my works section */
+    .my-works__imgs {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 0;
+    }
+
+    /*----------*----------*----------* services section */
+    .services__service-cards {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
 }
