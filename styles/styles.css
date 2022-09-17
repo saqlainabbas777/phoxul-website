@@ -571,6 +571,7 @@ img {
 
 .my-works__areas {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -589,7 +590,7 @@ img {
 
 .my-works__imgs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-template-rows: repeat(4, min-content);
     gap: 2rem;
 }
@@ -920,6 +921,15 @@ img {
 }
 
 /*----------*----------*----------**----------*----------*----------* media queries */
+@media screen and (max-width: 1300px) {
+    /*----------*----------*----------* my works padding */
+    .my-works__imgs--img {
+        grid-column: auto / auto !important;
+        grid-row: auto / auto !important;
+    }
+}
+
+
 @media screen and (max-width: 900px){
     /*----------*----------*----------* section padding */
     .section__padding {
@@ -1059,4 +1069,6 @@ img {
     .news__article--img {
         grid-column: 1 / -1;
     }
+
+    /*----------*----------*----------* my works section */
 }
