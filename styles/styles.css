@@ -376,3 +376,56 @@ img {
 .personal--info__img:hover img {
     transform: scale(.95);
 }
+
+/*----------*----------*----------* services section */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.services__para {
+    text-align: center;
+}
+
+.services__para span {
+    display: block;
+}
+
+.services__service-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 6rem;
+    margin-top: 5rem;
+}
+
+.services__service-cards--card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    padding: var(--padding-st-l-h) 0;
+}
+
+.services__service-cards--card i {
+    font-size: var(--font-size-st-l);
+}
+
+.services__service-cards--card h3 {
+    font-size: var(--font-size-st-m);
+}
+
+/*gives you the even children*/
+.services__service-cards--card:nth-child(2n) {
+    border-bottom: 1px solid var(--color-quaternary);
+}
+
+/*gives you the odd children*/
+.services__service-cards--card:nth-child(2n + 1) {
+    border-top: 1px solid var(--color-quaternary);
+}
+
