@@ -23,6 +23,7 @@
 
     --color-secondary: hsl(0, 0%, 11%);
     --color-secondary-m: hsl(0, 0%, 11%, .4);
+    --color-secondary-m-2: hsl(0, 0%, 11%, .9);
 
     --color-tertiary: hsl(0, 0%, 17%);
     --color-quaternary: hsl(0, 1%, 50%);
@@ -174,6 +175,10 @@ img {
     position: relative;
 }
 
+.hamburger {
+    position: fixed;
+}
+
 .header::after {
     content: '';
     position: absolute;
@@ -262,12 +267,13 @@ img {
 
 .hero__content--links {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .hero__content--links__my-works,
 .hero__content--links__contact {
-    flex-basis: 30%;
+    flex-basis: 15rem;
     padding: var(--padding-st-s-v) var(--padding-st-m-h);
     border-radius: 5rem;
     font-size: var(--font-size-st-sc);
@@ -911,4 +917,87 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+}
+
+/*----------*----------*----------**----------*----------*----------* media queries */
+@media screen and (max-width: 900px){
+    /*----------*----------*----------* section padding */
+    .section__padding {
+        padding: var(--padding-d-l-v) var(--padding-d-mc-h);
+    }
+
+    /*----------*----------*----------* header section */
+    .header__nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--padding-d-m-v) var(--padding-d-l-h);
+        background-color: var(--color-secondary-m-2);
+        transition: all .65s ease-in-out;
+        height: 100vh;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        transform: translateX(100rem);
+        z-index: 9;
+    }
+
+    .hamburger {
+        height: 5rem;
+        width: 8rem;
+
+        top: 2rem;
+        right: 5rem;
+
+        background-color: var(--color-secondary-m-2);
+        padding: var(--padding-st-s-v);
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+
+        z-index: 10;
+    }
+
+    .hamburger__line {
+        height: 2px;
+        background-color: var(--color-primary);
+    }
+
+    .hamburger__line:first-child {
+        width: 50%;
+        transition: all 0.25s ease;
+    }
+
+    .hamburger__line:nth-child(2) {
+        transition: all 0.1s ease;
+    }
+
+    .hamburger__line:last-child {
+        width: 50%;
+        transition: all 0.25s ease;
+
+        align-self: flex-end;
+    }
+
+    /*DYNAMIC CLASS*/
+    .display__nav {
+        transform: translateX(0);
+    }
+
+    .hamburger__line-1 {
+        transform: rotate(45deg) translateX(1.7rem) translateY(-.2rem);
+    }
+
+    .hamburger__line-2 {
+        visibility: hidden;
+    }
+
+    .hamburger__line-3 {
+        transform: rotate(-45deg) translateX(-.2rem) translateY(-2.1rem);
+    }
+
 }
