@@ -1027,4 +1027,15 @@ img {
     .personal--info__img::before {
         left: -10%;
     }
+
+    /*----------*----------*----------*  section title */
+
+    .section__title {
+        font-size: var(--font-size-st-mc);
+    }
+
+    /*----------*----------*----------* services section */
+    .services__service-cards--card {
+        border: none !important;
+    }
 }
