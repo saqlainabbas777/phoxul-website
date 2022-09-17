@@ -1000,4 +1000,12 @@ img {
         transform: rotate(-45deg) translateX(-.2rem) translateY(-2.1rem);
     }
 
+    /*----------*----------*----------* Hero section */
+    .hero__content {
+        flex-basis: auto;
+    }
+
+    .hero__bg {
+        width: 100%;
+    }
 }
