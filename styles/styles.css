@@ -1038,4 +1038,25 @@ img {
     .services__service-cards--card {
         border: none !important;
     }
+
+    /*----------*----------*----------* news section */
+    .news__article--content {
+        grid-column: 1 / -1;
+        background-color: var(--color-secondary-m-2);
+    }
+
+    .news__article--content__mini-title,
+    .news__article--content__link::after {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+    }
+
+    .news__article--content__title,
+    .news__article--content__link{
+        color: var(--color-primary);
+    }
+
+    .news__article--img {
+        grid-column: 1 / -1;
+    }
 }
