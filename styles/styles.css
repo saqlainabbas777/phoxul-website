@@ -1008,4 +1008,23 @@ img {
     .hero__bg {
         width: 100%;
     }
+
+    /*----------*----------*----------* personal info section */
+    .personal-info {
+        flex-wrap: wrap;
+    }
+
+    .personal-info__content,
+    .personal--info__img {
+        flex-basis: 100%;
+    }
+
+    .personal--info__img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .personal--info__img::before {
+        left: -10%;
+    }
 }
