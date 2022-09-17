@@ -135,7 +135,7 @@ li {
 
 /*----------*----------* section title */
 .section__title {
-    font-size: var(--font-size-d-lc);
+    font-size: var(--font-size-d-sc);
     font-weight: 900;
 }
 
@@ -295,4 +295,84 @@ img {
 .hero__content--links__contact:hover {
     background-color: var(--color-primary);
     color: var(--color-secondary);
+}
+
+/*----------*----------*----------* Personal info section */
+.personal-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.personal-info__content {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.personal-info__content--experience {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.personal-info__content--experience div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.personal-info__content--experience div i {
+    font-size: var(--font-size-st-sc);
+    padding: var(--padding-st-s-v);
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.personal--info__img {
+    flex-basis: 50%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+.personal--info__img::before,
+.personal--info__img::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.personal--info__img::before {
+    top: -7%;
+    left: -14%;
+    width: 50%;
+    height: 50%;
+    background-image: url("../images/dot.png");
+}
+
+.personal--info__img::after {
+    top: 5%;
+    right: -5%;
+    height: 100%;
+    width: 80%;
+    background-color: var(--color-secondary);
+}
+
+.personal--info__img img {
+    /*height: 80%;*/
+    /*width: 80%;*/
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .25s ease-in-out;
+}
+
+.personal--info__img:hover img {
+    transform: scale(.95);
 }
